@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Task-1 Temperature Converter</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <nav>
+                <div class="nav-left">
+                    <svg viewBox="0 0 84 92" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g filter="url(#filter0_d_1_100)">
+                            <rect x="4" width="76" height="84" fill="url(#pattern0)" shape-rendering="crispEdges" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_1_100" x="0" y="0" width="84" height="92" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset dy="4" />
+                                <feGaussianBlur stdDeviation="2" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_100" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_100" result="shape" />
+                            </filter>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_1_100" transform="matrix(0.01 0 0 0.00904762 0 0.047619)" />
+                            </pattern>
+                            <image id="image0_1_100" width="100" height="100" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAExUlEQVR4nO2dzYscRRjG14OJMYqKoq75EEWMaDyYg9H4RXLwpB5MIv4NMXqKGHJQECOSg/iRaGIEs0E8SPAiURAjxDUaQfGgkqgICYliEJHZdTVxXX9Su09jsa49Mztd07Uzzw8Gpmr6re56n66q7np7qgcGjDHGGGOMMcYYY4wxxpjaAG4Enge+An7TJ3x/DlhuabonxHzgJWCC/yf8tgOYZ2HSi/GBnH5arWElcAFwLnAz8AJwRtscsChpBXlZjv4JWFGy3U3AD9p2e8pj6vcxYwL4C1jVwvYr1FLC9jd05yj7CKa6p8CeNmy2y+bZtEfXhwBfy7lr2rC5RTZfpj26PgQYkXMvbMPmfNmMpD26PoR/OWs2dumOrE9hlo61IInAguQFFiQvsCB5gQXJCyxIXmBBelsQ4FDJ9P1wZQfeq1C9IMMlgnxY2YH3KrjLygssSF5gQfICC5IXWJC8wILkBb4PyQt8H5K/IMASYJ/Cu+HzFrCsmZ1JIAhTYvwyw112yFtsQbovyL6SqY83LUj3BRkpEaRhQbovSCkWxIL0F1TcQhwPyU+Q4RJzx0O6LYjpECxIXmBB8gILkhdYkLzAgvT8Ze+hEnM/l1WDIMMl5r4P6bYgpkOwIHmBBckLLEgeAGcDT0iPiVmMIcUiNY+HsmqrSC/AVNz8czn0b2DbLATZJtvAZ8Ci2io0lwGWAyflyKPA7dFvVzQTJGwTbb8K+Fb5J7z2SftiLI3EOFCs3gAMAkPR8ktlhG32BBvZXgS8F4mypLrTp4cB5gFfRGJMLkIGrAN+pX2Czdpova33lR+6Qo8pLQjylBx2JGoZjzRZQa4ZwXZjtP7Jd8p/MvkZNpcBrlRXExx4m/LWRoNyJ4Qy71eZK5UOq9K56yoRZJec91o0eDeojkYx2AN7lbeja2fcXEJrJo6qNVyvvNepnr0q+1rtK4i0oO76ZwfwgBx2UOlFwHgCQf6MWsnHyltXd/2zQ8u6BrYo/Sjp2KR9bFb6xbrrnx3Ap3LOHUrvTyjI29rHaqU/qbv+2QH8KOcsVfp4QkGOaR+LlT5Zd/2zA/hDziluBMcSCjKmfSxQ+ve6658d0XTIQqXDFVcqGtGde+B03fXPDuBnOWdyNhb4JqEgR6O5scCpuuuf86C+Wul3EwqyX/u4S2kP6jMI8sq0y96NCQXZoH08pvTOrp+BuQM8GD+Co+BUWLe9asaLP4VGjwKtr7v+2aFZ2DE5aPKFLMCrCQTZpbKXaepktLiQMP8VZbecNhRNn5T9ubNdGlHAaigWyMzcSq7RXFM4c+9U3n0dxkIKQhn3qsxbo+n3qyxGedf1jBwYYuAXVxigelhlXRLF17dajOZjyfzoQegw6J4TtZSRWXZT96iMhcDhqGy/o6oVgMuiuayD4ayOAla7W7z6GlfAazBqGUU8/RhwqVtH+48BHZcDvy/GlGhS8CHgHcXeR/U5olniDdPWO1kTvZMqlOlXIHXQUj6SI8NA/0Y77ygErlOodiLqptwyKhhTnp72LFaYZtkC3A1cHsYZzdwOKsaxWc4vHo4Itls9ZlQIcLXGhPBGz1YZlY0vbVMBnKf4+05dMZ1SCzij74f1vsP1vgM3xhhjjDHGGGPMQEf8A2HgEN6gh4EJAAAAAElFTkSuQmCC" />
+                        </defs>
+                    </svg>
+                    <h1>Temperature Converter</h1>
+                </div>
+                <div class="nav-right">
+                    <div class="switch-btn"></div>
+                </div>
+            </nav>
+            <section class="main-content">
+                <div class="main-content-content">
+                    <div class="left-content">
+                        <div class="temp-btns left-btns">
+                            <div class="temp-btn i-active intemp">°C</div>
+                            <div class="temp-btn i-disabled intemp">°F</div>
+                            <div class="temp-btn i-disabled intemp">°K</div>
+                        </div>
+                        <div class="input-temp">
+                            <input type="number" placeholder="0" value="1" class="input-temp-input" oninput="calculate(value)">
+                        </div>
+                    </div>
+                    <div class="middle-content">
+                        <svg width="21" height="13" viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="21" height="4" rx="2" fill="url(#paint0_linear_1_149)" />
+                            <rect y="9" width="21" height="4" rx="2" fill="url(#paint1_linear_1_149)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_1_149" x1="10.5" y1="0" x2="10.5" y2="4" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#2DDD01" />
+                                    <stop offset="1" stop-color="#21A201" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1_149" x1="10.5" y1="9" x2="10.5" y2="13" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#2DDD01" />
+                                    <stop offset="1" stop-color="#21A201" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                    </div>
+                    <div class="right-content">
+                        <div class="temp-btns right-btns">
+                            <div class="temp-btn strikeout outtemp">°C</div>
+                            <div class="temp-btn o-active outtemp">°F</div>
+                            <div class="temp-btn o-disabled outtemp">°K</div>
+                        </div>
+                        <div class="output-temp">
+
+                            <input type="number" value="33.8" readonly class="output-temp-output">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="content-footer">
+                    <p class="content-footer-content">
+                        1 °C = 33.8 °F
+                    </p>
+                </div> -->
+            </section>
+            <footer>
+                All copyrights reserved @<a href="#">Venu-webdev</a>
+            </footer>
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <!-- js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
